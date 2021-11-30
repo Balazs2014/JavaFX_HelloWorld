@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="200" prefWidth="300" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <TextField fx:id="nevBevitel" alignment="TOP_LEFT" promptText="Név" />
+        <HBox>
+            <children>
+                <Label fx:id="eletkorLabel" text="Életkor:" />
+                <Spinner fx:id="eletkorBevitel" editable="true">
+                    <valueFactory>
+                       <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="1" initialValue="20" max="150" min="10" />
+                    </valueFactory>
+                </Spinner>
+            </children>
+        </HBox>
+        <Button mnemonicParsing="false" onAction="#felvetelClick" text="Felvétel" />
+      <ListView fx:id="emberLista" prefHeight="200.0" prefWidth="200.0" />
+    </children>
+</VBox>
